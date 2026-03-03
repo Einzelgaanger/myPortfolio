@@ -1,9 +1,9 @@
-# Render Blueprint - use this so deploys run a fresh build and start the Node server
+# Render Blueprint - new Web Service from this repo
+# After connecting this repo, Render will use these settings.
 services:
   - type: web
     name: alfred-portfolio
-    env: node
+    runtime: node
     buildCommand: npm install && npm run build
     startCommand: npm start
-    # Ensure Render uses the built output (server runs from repo root, serves dist/public)
-    healthCheckPath: /
+    # Static files + SPA fallback served from dist/public by Node server
