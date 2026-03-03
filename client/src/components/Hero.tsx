@@ -45,7 +45,7 @@ export default function Hero() {
             </p>
             
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-xl">
-              Innovative data analyst, AI consultant, and full-stack developer with extensive experience building enterprise-grade applications and delivering data-driven strategic insights. Specialized in productivity analytics, AI-powered platforms, blockchain solutions, and quantitative research across fintech, blockchain, and development sectors. Proven track record architecting scalable systems, conducting advanced statistical modeling, and translating complex data into actionable business intelligence. Combines technical excellence in React, TypeScript, Python, and R with strategic thinking to drive measurable business impact.
+              I build enterprise-grade applications and turn data into clear, actionable insights. I work across data analytics, AI, full-stack development, and strategic consulting — and I love connecting the dots between systems, people, and impact.
             </p>
             
             <div className="flex flex-wrap gap-4">

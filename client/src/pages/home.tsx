@@ -144,11 +144,11 @@ export default function Home() {
               </div>
               <span className="block w-12 h-0.5 bg-gradient-to-r from-primary to-accent rounded-full mb-4" />
               <h3 className="text-2xl font-bold font-display mb-4 text-primary tracking-tight">My Mission</h3>
-              <p className="text-muted-foreground leading-relaxed mb-6 relative z-10">
-                Innovative data analyst, AI consultant, and full-stack developer with extensive experience building enterprise-grade applications and delivering data-driven strategic insights. Specialized in productivity analytics, AI-powered platforms, blockchain solutions, and quantitative research across fintech, blockchain, and development sectors.
+              <p className="text-muted-foreground leading-relaxed mb-4 relative z-10">
+                I'm here to get exposure, build systems, and grow social enterprise so that young people see they can design and achieve as much as anyone else. I believe in learning from the best — through mentorship and real projects — and making the world a better place by multiplying great minds in the next generation of rising stars.
               </p>
               <p className="text-muted-foreground leading-relaxed relative z-10">
-                Proven track record architecting scalable systems, conducting advanced statistical modeling, and translating complex data into actionable business intelligence. I combine technical excellence in React, TypeScript, Python, and R with strategic thinking to drive measurable business impact.
+                That’s why I founded Santa’s Heart Foundation, work with youth in my community, and keep building tools and platforms that others can stand on. I want to duplicate what great mentors gave me: clarity, confidence, and a path to design the future.
               </p>
               
               <div className="mt-8 relative z-10">
