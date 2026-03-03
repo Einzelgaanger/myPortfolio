@@ -53,7 +53,8 @@ export default function Contact() {
         transition={{ duration: 0.6 }}
         className="space-y-8"
       >
-        <h3 className="text-3xl font-bold font-display">Let's work together</h3>
+        <h3 className="text-3xl font-bold font-display tracking-tight">Let's work together</h3>
+        <span className="block w-16 h-1 rounded-full bg-gradient-to-r from-primary to-accent mb-4" />
         <p className="text-muted-foreground text-lg leading-relaxed">
           I'm currently available for freelance work and full-time positions.
           If you have a project that needs some data magic or a web application that needs building,
@@ -102,8 +103,9 @@ export default function Contact() {
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
-        <Card className="p-8 bg-secondary/20 border-white/5 backdrop-blur-sm">
-          <form className="space-y-6" onSubmit={handleSubmit}>
+        <Card className="p-8 bg-secondary/40 border border-border/60 backdrop-blur-md relative overflow-hidden">
+          <div className="absolute inset-0 bg-grid-pattern-dense opacity-[0.15] pointer-events-none rounded-[inherit]" aria-hidden />
+          <form className="relative space-y-6" onSubmit={handleSubmit}>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label htmlFor="name" className="text-sm font-medium text-muted-foreground">Name</label>
@@ -175,7 +177,7 @@ function ContactChannelCard({
   href: string;
 }) {
   return (
-    <div className="p-5 rounded-2xl border border-white/5 bg-background/40 hover:border-primary/30 transition-colors group">
+    <div className="p-5 rounded-xl border border-border/60 bg-background/50 hover:border-primary/40 transition-all duration-300 group">
       <div className="flex items-center gap-4">
         <div className="p-3 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
           {icon}
@@ -208,7 +210,7 @@ function ReferenceCard({
   phone: string;
 }) {
   return (
-    <div className="p-5 rounded-2xl border border-white/5 bg-background/30">
+    <div className="p-5 rounded-xl border border-border/60 bg-background/40">
       <div className="flex items-center gap-4">
         <div className="p-3 rounded-full bg-primary/10 text-primary">{icon}</div>
         <div>

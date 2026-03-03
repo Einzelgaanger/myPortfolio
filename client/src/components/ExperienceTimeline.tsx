@@ -15,10 +15,14 @@ const experiences: ExperienceItem[] = [
     company: "ProDG Studios",
     period: "April 2025 - Present",
     description: [
-      "Architected VGG Holdings Portal, an enterprise-grade multi-company management platform featuring AI-powered assistant and real-time analytics.",
-      "Conducted comprehensive Microsoft 365 productivity analysis for enterprise clients, identifying productivity bottlenecks.",
-      "Led strategic proposal drafting for high-value clients including Safaricom telemedicine initiatives.",
-      "Authored comprehensive litepaper for stablecoin client including tokenomics design and market positioning."
+      "Architected and built the Bank of Ghana FX & Remittance Transparency Dashboard—regulatory supervisory demo for central-bank visibility into FX and remittance flows (React, TypeScript, Vite, shadcn/ui, Recharts, jsPDF).",
+      "Built Receivables Securitisation Origination (RSO) platform—TReDS-inspired trade receivables discounting for Kenya's KES 500B+ pending bills; full-stack multi-portal app with blockchain settlement layer (Supabase + React/TypeScript).",
+      "Architected VGG Holdings Portal, enterprise multi-company management platform with AI-powered assistant, role-based access, real-time analytics, API integration hub, and workflow automation (React, TypeScript, Supabase).",
+      "Conducted comprehensive Microsoft 365 productivity analysis for enterprise client (meeting attendance, email metrics, departmental performance); delivered actionable insights on productivity bottlenecks and collaboration opportunities.",
+      "Architected VGG 360° Performance Review dashboard—Excel-based 360° appraisal ingestion, manager leaderboards, competency radar, AI chat assistant over full dataset; export to PDF/Excel (React, TypeScript, Vite, Tailwind, shadcn/ui, Supabase).",
+      "Led strategic proposal drafting for high-value clients including Safaricom telemedicine initiatives across Helium Health ecosystem; collaborated with C-suite in cross-company strategy meetings.",
+      "Authored comprehensive litepaper for stablecoin client (tokenomics, market positioning, competitive landscape); designed gold-backed stablecoin framework with full white paper; prepared remittance framework proposals for blockchain clients.",
+      "Delivered data-driven market research and feasibility studies supporting client strategic decision-making."
     ]
   },
   {
@@ -26,10 +30,11 @@ const experiences: ExperienceItem[] = [
     company: "Collaborative Frontier Finance (CFF)",
     period: "June 2025 - Present",
     description: [
-      "Built Fund Manager Portal for ESCP Network managing 260+ fund manager profiles.",
-      "Engineered full-stack application with real-time analytics dashboard and searchable network directory.",
-      "Implemented real-time data synchronization using Supabase (PostgreSQL + Realtime) with React/TypeScript.",
-      "Developed version 2 of internal database management tool with enhanced data architecture."
+      "Built Fund Manager Portal for ESCP Network managing 260+ fund manager profiles across 4 years of survey data (2021–2024).",
+      "Engineered full-stack app with automated application workflow, multi-year survey platform with version control, real-time WhatsApp-style analytics, searchable network directory with advanced filtering, role-based access, and blog/CMS.",
+      "Implemented real-time data sync using Supabase (PostgreSQL + Realtime + Storage) with React and TypeScript.",
+      "Developed version 2 of internal database management tool; created fund manager portfolio system and forum for community engagement.",
+      "Draft strategic proposals and research reports leveraging data analytics; manage website updates and technical infrastructure."
     ]
   },
   {
@@ -37,9 +42,10 @@ const experiences: ExperienceItem[] = [
     company: "Astarus AI",
     period: "October 2025 - Present",
     description: [
-      "Co-founding innovative AI startup building GPT2xLUT, a continuous learning language model.",
-      "Leading VC outreach, fundraising strategy, and investor relations for early-stage funding.",
-      "Developed full-stack implementation with multi-tenant infrastructure."
+      "Co-founding AI startup building GPT2xLUT—continuous learning language model combining GPT-2 with dynamic Lookup Table augmentation for real-time learning without full retraining.",
+      "Leading VC outreach, fundraising strategy, and investor relations for early-stage funding rounds.",
+      "Conducting market research, competitive analysis, strategic positioning; identifying high-value use cases and go-to-market strategy.",
+      "Developed full-stack implementation with API, frontend, database, user authentication, multi-tenant infrastructure, and production deployment."
     ]
   },
   {
@@ -47,9 +53,10 @@ const experiences: ExperienceItem[] = [
     company: "Santa's Heart Foundation",
     period: "July 2025 - Present",
     description: [
-      "Founded youth-focused NGO providing free educational programs in financial literacy and AI awareness.",
-      "Reached 50+ beneficiaries through structured outreach programs providing essential support.",
-      "Building sustainable programs creating confident, tech-savvy future leaders."
+      "Founded youth-focused NGO providing free programs in financial literacy, creative thinking, AI awareness, and mental health support.",
+      "Reached 50+ beneficiaries with clothing, food, shoes, and educational materials for underserved youth and street children.",
+      "Led hands-on workshops and mentorship for ages 5–25; building sustainable programs for confident, tech-savvy, emotionally intelligent future leaders.",
+      "Established social media presence: Instagram @santasheartfoundation."
     ]
   },
   {
@@ -57,9 +64,9 @@ const experiences: ExperienceItem[] = [
     company: "Algum Africa Capital",
     period: "June 2025 - August 2025",
     description: [
-      "Built multiple regression models forecasting LPG demand in Mozambique market.",
-      "Developed custom secure database system for efficient data management.",
-      "Applied econometric modeling techniques to support investment decision-making."
+      "Led structured data collection and organization for business intelligence.",
+      "Built multiple regression models forecasting LPG demand in Mozambique using objective scoring and statistical weightings.",
+      "Developed custom secure database system; applied econometric modeling to support investment decision-making."
     ]
   },
   {
@@ -76,8 +83,8 @@ const experiences: ExperienceItem[] = [
     company: "DealFuze (UK VC)",
     period: "April 2025 - May 2025",
     description: [
-      "Developed intelligent matching algorithm connecting investors with founders based on aligned investment goals.",
-      "Worked under mentorship of Senior Developers gaining advanced algorithm design experience."
+      "Developed intelligent matching algorithm connecting investors with founders based on aligned investment goals and readiness metrics.",
+      "Worked under mentorship of Noella Spitz, Senior Developer, gaining advanced algorithm design experience."
     ]
   },
   {
@@ -112,8 +119,9 @@ const experiences: ExperienceItem[] = [
     company: "USAID | ACDI/VOCA | RLA",
     period: "January 2025 - February 2025",
     description: [
-      "Cleaned and structured large humanitarian datasets supporting Russia-Ukraine conflict analysis.",
-      "Conducted research and exploratory analysis informing UN economic recovery strategies."
+      "Cleaned and structured large humanitarian datasets supporting Russia–Ukraine conflict analysis.",
+      "Conducted research and exploratory analysis informing UN economic recovery strategies.",
+      "Developed presentation materials for internal briefings and external stakeholder communications; completed consulting-style case on data-driven use cases for development finance institutions."
     ]
   },
   {
@@ -146,7 +154,9 @@ const experiences: ExperienceItem[] = [
 
 export default function ExperienceTimeline() {
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="max-w-4xl mx-auto relative">
+      {/* Vertical axis line */}
+      <div className="hidden md:block absolute left-[50%] top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary/20 via-primary/50 to-primary/20 transform -translate-x-1/2 -translate-y-4" />
       <div className="space-y-12">
         {experiences.map((exp, index) => (
           <motion.div
@@ -157,17 +167,14 @@ export default function ExperienceTimeline() {
             transition={{ duration: 0.5, delay: index * 0.1 }}
             className="relative pl-8 md:pl-0 group"
           >
-            {/* Timeline Line */}
-            <div className="hidden md:block absolute left-[50%] top-0 bottom-0 w-px bg-border group-last:bottom-auto group-last:h-full transform -translate-x-1/2" />
-            
-            {/* Timeline Dot */}
-            <div className="absolute left-0 md:left-[50%] top-0 w-4 h-4 rounded-full border-2 border-primary bg-background z-10 transform md:-translate-x-1/2 mt-1.5 group-hover:bg-primary group-hover:scale-110 transition-all duration-300" />
+            {/* Data-point dot */}
+            <div className="absolute left-0 md:left-[50%] top-0 w-3.5 h-3.5 rounded-full border-2 border-primary bg-background z-10 transform md:-translate-x-1/2 mt-2 group-hover:bg-primary group-hover:scale-125 group-hover:shadow-lg group-hover:shadow-primary/30 transition-all duration-300" />
 
             <div className={`md:flex gap-12 items-start ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
               
               {/* Date Side */}
               <div className={`md:w-1/2 mb-2 md:mb-0 ${index % 2 === 0 ? 'md:text-left' : 'md:text-right'}`}>
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/30 text-primary text-sm font-medium border border-primary/10">
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-secondary/40 text-primary text-sm font-mono font-medium border border-primary/20">
                   <Calendar className="w-3 h-3" />
                   {exp.period}
                 </div>
@@ -175,16 +182,16 @@ export default function ExperienceTimeline() {
 
               {/* Content Side */}
               <div className="md:w-1/2">
-                <div className="bg-card/50 border border-white/5 p-6 rounded-2xl hover:border-primary/30 hover:shadow-lg transition-all duration-300">
-                  <h3 className="text-xl font-bold font-display text-foreground mb-1">{exp.role}</h3>
-                  <div className="flex items-center gap-2 text-primary font-medium mb-4">
+                <div className="bg-card/60 border border-border/60 p-6 rounded-xl hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 backdrop-blur-sm">
+                  <h3 className="text-xl font-bold font-display text-foreground mb-1 tracking-tight">{exp.role}</h3>
+                  <div className="flex items-center gap-2 text-primary font-mono text-sm font-medium mb-4">
                     <Briefcase className="w-4 h-4" />
                     {exp.company}
                   </div>
                   <ul className="space-y-2">
                     {exp.description.map((item, i) => (
                       <li key={i} className="text-muted-foreground text-sm leading-relaxed flex items-start gap-2">
-                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary/50 flex-shrink-0" />
+                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
                         {item}
                       </li>
                     ))}

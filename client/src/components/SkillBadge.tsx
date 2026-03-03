@@ -15,12 +15,12 @@ export default function SkillBadge({ name, icon, level, index }: SkillBadgeProps
       initial={{ opacity: 0, scale: 0.9 }}
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.4, delay: index * 0.05 }}
+      transition={{ duration: 0.4, delay: index * 0.03 }}
       className="relative group"
     >
-      <div className="flex items-center gap-3 bg-secondary/30 border border-white/5 hover:border-primary/40 rounded-xl px-4 py-3 transition-all hover:bg-secondary/50 cursor-default">
+      <div className="flex items-center gap-3 bg-secondary/40 border border-border/60 hover:border-primary/50 rounded-lg px-4 py-2.5 transition-all duration-300 hover:bg-secondary/60 hover:shadow-md hover:shadow-primary/5 cursor-default font-mono text-sm">
         {icon && <span className="text-primary">{icon}</span>}
-        <span className="font-medium text-foreground">{name}</span>
+        <span className="font-medium text-foreground tracking-tight">{name}</span>
       </div>
     </motion.div>
   );

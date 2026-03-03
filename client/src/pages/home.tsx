@@ -27,30 +27,87 @@ import walletImg from '@assets/generated_images/mobile_money_wallet_concept.png'
 
 export default function Home() {
   const skills = [
-    "React", "TypeScript", "Node.js", "Python", "R", "Django", 
-    "Machine Learning", "GPT-2", "Deep Learning", "TensorFlow", 
-    "SQL", "PostgreSQL", "Supabase", "Firebase", "MongoDB",
-    "Tableau", "PowerBI", "Blockchain", "Hyperledger", "AWS"
+    "React", "TypeScript", "JavaScript", "Vite", "Python", "R", "Django", "React Native",
+    "Machine Learning", "GPT-2", "AI/ML", "Supabase", "PostgreSQL", "SQL", "Firebase", "MongoDB",
+    "Power BI", "Tableau", "Recharts", "D3.js", "Plotly", "Matplotlib",
+    "Tailwind CSS", "shadcn/ui", "Blockchain", "Hyperledger", "Tokenomics",
+    "REST APIs", "Render", "Vercel", "LaTeX", "Excel", "Pandas", "NumPy"
   ];
 
   const projects = [
     {
+      title: "Bank of Ghana FX & Remittance Transparency Dashboard",
+      description: "Regulatory supervisory demo for central-bank visibility into FX and remittance flows (post-trade, anonymized, aggregated). Delivers Governor-level stability cockpit, price-discovery and transparency layers, NAFEM-style market intelligence, corridor/channel mapping with commingling overlay, FX flows by segment, settlements & reconciliation tracking, and PDF regulatory reports. Built with React, TypeScript, Vite, shadcn/ui, Tailwind, Recharts, jsPDF; full working demo with structured mock data.",
+      tags: ["React", "TypeScript", "Vite", "Recharts", "shadcn/ui", "jsPDF"],
+      link: "#",
+      imageUrl: "https://images.unsplash.com/photo-1543286386-713bdd548da4?w=800&h=600&fit=crop&q=80"
+    },
+    {
+      title: "RSO — Receivables Securitisation Origination",
+      description: "TReDS-inspired trade receivables discounting system for Kenya's KES 500B+ pending bills. Full-stack multi-portal app: Supplier, SPV, MDA, Treasury, Admin. Bill-to-certification workflow, blockchain settlement layer, concept note PDF generator. Idea from SPV; brought to life as a working demo. Supabase + React/TypeScript.",
+      tags: ["React", "TypeScript", "Supabase", "Blockchain", "TReDS"],
+      link: "#",
+      imageUrl: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&h=600&fit=crop&q=80"
+    },
+    {
       title: "VGG Holdings Portal",
-      description: "Enterprise multi-company management platform with AI-powered assistant, unified analytics dashboards, workflow automation, and deep API integrations for SeamlessHR and Microsoft 365 data.",
-      tags: ["React", "TypeScript", "Supabase", "AI Assistant", "Automation"],
+      description: "Enterprise multi-company management platform with AI-powered assistant providing role-specific insights through natural language queries. Features unified dashboard, granular role-based permissions, real-time performance analytics, API integration hub (SeamlessHR, etc.), and workflow automation. Built with React, TypeScript, Vite, Supabase, Tailwind CSS, and shadcn/ui. Live and optimizing operations.",
+      tags: ["React", "TypeScript", "Supabase", "AI Assistant", "shadcn/ui"],
       link: "#",
       imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop&q=80"
     },
     {
       title: "Fund Manager Portal",
-      description: "Full-stack ESCP Network platform managing 260+ fund manager profiles, survey history, automated workflows, community content, and real-time insights using Supabase Realtime.",
+      description: "Comprehensive ESCP Network platform managing 260+ fund managers across 4-year survey history. Features automated application workflow, multi-year survey system with version control, real-time WhatsApp-style analytics, searchable member profiles with advanced filtering, secure role-based access, and community blog system. Full-stack: React + TypeScript + Supabase (PostgreSQL + Realtime).",
       tags: ["React", "TypeScript", "Supabase", "Realtime", "PostgreSQL"],
       link: "#",
       imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&q=80"
     },
     {
+      title: "GPT2xLUT — Continuous Learning AI",
+      description: "Innovative language model combining GPT-2 with dynamic Lookup Table augmentation enabling real-time learning without full retraining. Features persistent knowledge storage via Supabase, user-specific personalization, multi-tenant architecture, and production-ready infrastructure. Leading business development and VC fundraising.",
+      tags: ["Python", "GPT-2", "Machine Learning", "Supabase"],
+      link: "#",
+      imageUrl: gpt2Img
+    },
+    {
+      title: "AI Research Commercialization Assessment Tool",
+      description: "Intelligent platform evaluating research commercialization potential using configurable metrics framework. Default and custom scoring criteria with user-defined weightages; generates analytics reports identifying strengths, weaknesses, and market readiness scores for technology transfer and research institutions.",
+      tags: ["Python", "Machine Learning", "React", "Analytics"],
+      link: "#",
+      imageUrl: aiCommercializationImg
+    },
+    {
+      title: "Bunifu Student Platform",
+      description: "Comprehensive student platform consolidating study materials, job opportunities, event management, and career development tools. Features gamification and collaborative learning spaces. Ongoing—seeking funding.",
+      tags: ["React", "Node.js", "MongoDB", "Gamification"],
+      link: "#",
+      imageUrl: studentPlatformImg
+    },
+    {
+      title: "TengaPesa Platform",
+      description: "Proposed M-PESA enhancement enabling purpose-specific mini-wallets with configurable lock mechanisms and withdrawal conditions for disciplined financial planning and savings goals.",
+      tags: ["React", "Node.js", "M-Pesa API", "Firebase", "Supabase"],
+      link: "https://tengapesa.onrender.com",
+      imageUrl: walletImg
+    },
+    {
+      title: "BizLens SME Management Platform",
+      description: "Comprehensive React Native business management solution helping SME owners manage accounting, inventory, and operations more efficiently and accurately with mobile-first design.",
+      tags: ["React Native", "Firebase", "Python", "ML"],
+      link: "#",
+      imageUrl: smeAppImg
+    },
+    {
+      title: "MemVault Platform",
+      description: "Integrated planning platform combining journaling, event scheduling, and photo storage. Fusion of journal, Google Calendar, and Google Photos with emphasis on privacy and usability.",
+      tags: ["React", "Node.js", "MongoDB", "Firebase"],
+      link: "https://memvault.onrender.com",
+      imageUrl: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop&q=80"
+    },
+    {
       title: "SecureAid",
-      description: "Digital solution mitigating corruption in NGO fund disbursements through transparent tracking and accountability mechanisms.",
+      description: "Digital solution mitigating corruption in NGO fund disbursements through transparent tracking and accountability mechanisms. Live at secureaid.online.",
       tags: ["Blockchain", "React", "Django", "Transparency"],
       link: "https://secureaid.online",
       imageUrl: secureAidImg
@@ -63,51 +120,9 @@ export default function Home() {
       imageUrl: transparentTrackImg
     },
     {
-      title: "AI Research Commercialization Tool",
-      description: "Intelligent platform evaluating research commercialization potential using configurable metrics framework with weighted scoring and automated analytics briefings.",
-      tags: ["Python", "Machine Learning", "React", "Node.js"],
-      link: "#",
-      imageUrl: aiCommercializationImg
-    },
-    {
-      title: "GPT2xLUT -- Continuous Learning AI",
-      description: "Continuous-learning GPT-2 platform combining LUT augmentation with Supabase persistence for real-time personalization, multi-tenant workspaces, and API access.",
-      tags: ["Python", "GPT-2", "Machine Learning", "Supabase"],
-      link: "#",
-      imageUrl: gpt2Img
-    },
-    {
-      title: "Bunifu Student Platform",
-      description: "Comprehensive student platform consolidating study materials, job opportunities, events, and gamified growth paths for career development.",
-      tags: ["React", "Node.js", "MongoDB", "Gamification"],
-      link: "#",
-      imageUrl: studentPlatformImg
-    },
-    {
-      title: "TengaPesa Platform",
-      description: "Proposed M-PESA enhancement enabling purpose-specific mini-wallets with configurable lock mechanisms and withdrawal conditions for disciplined financial planning.",
-      tags: ["React", "Node.js", "M-Pesa API", "Firebase", "Supabase"],
-      link: "https://tengapesa.onrender.com",
-      imageUrl: walletImg
-    },
-    {
-      title: "BizLens SME Management Platform",
-      description: "React Native solution helping SME owners manage accounting, inventory, and operations with mobile-first dashboards and computer-vision powered insights.",
-      tags: ["React Native", "Firebase", "Computer Vision", "Python", "ML"],
-      link: "#",
-      imageUrl: smeAppImg
-    },
-    {
-      title: "MemVault Platform",
-      description: "Integrated journaling, event planning, and photo archiving application blending Google Calendar and Photos experiences with privacy-first design.",
-      tags: ["React", "Node.js", "MongoDB", "Firebase"],
-      link: "https://memvault.onrender.com",
-      imageUrl: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop&q=80"
-    },
-    {
-      title: "Kenyan Food Price Analysis",
-      description: "Award-winning longitudinal econometric analysis (2006-2024) identifying volatility drivers with ARIMA and VAR models, delivered via R and LaTeX.",
-      tags: ["R", "LaTeX", "Statistical Modeling", "ARIMA", "Data Viz"],
+      title: "Kenyan Food Price Econometric Analysis",
+      description: "Award-winning longitudinal study (2006–2024) developing econometric models identifying price volatility drivers. Applied ARIMA and VAR methodologies producing policy recommendations. Recognized as top analysis across all cohorts.",
+      tags: ["R", "LaTeX", "ARIMA", "VAR", "Data Viz"],
       link: "/iLab.pdf",
       imageUrl: foodPriceImg
     }
@@ -122,22 +137,18 @@ export default function Home() {
       <Section id="about" title="About Me" background="subtle">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative order-2 md:order-1">
-            <div className="absolute -inset-4 bg-gradient-to-r from-primary to-blue-600 rounded-2xl blur-lg opacity-30" />
-            <div className="relative bg-card border border-border p-8 rounded-2xl overflow-hidden">
+            <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-accent/20 rounded-xl blur-xl" />
+            <div className="relative bg-card/80 border border-border/60 p-8 rounded-xl overflow-hidden backdrop-blur-sm bg-grid-pattern-dense">
               <div className="absolute top-0 right-0 p-4 opacity-10">
                 <Brain className="w-32 h-32 text-primary" />
               </div>
-              <h3 className="text-2xl font-bold font-display mb-4 text-primary">My Mission</h3>
+              <span className="block w-12 h-0.5 bg-gradient-to-r from-primary to-accent rounded-full mb-4" />
+              <h3 className="text-2xl font-bold font-display mb-4 text-primary tracking-tight">My Mission</h3>
               <p className="text-muted-foreground leading-relaxed mb-6 relative z-10">
-                To leverage the power of data and technology to solve real-world problems. 
-                I am passionate about uncovering hidden patterns in data and building 
-                applications that make those insights accessible and actionable.
+                Innovative data analyst, AI consultant, and full-stack developer with extensive experience building enterprise-grade applications and delivering data-driven strategic insights. Specialized in productivity analytics, AI-powered platforms, blockchain solutions, and quantitative research across fintech, blockchain, and development sectors.
               </p>
               <p className="text-muted-foreground leading-relaxed relative z-10">
-                With a strong foundation in both mathematics and computer science, 
-                I bridge the gap between theoretical algorithms and practical software engineering.
-                I combine technical excellence in React, TypeScript, Python, and R with strategic 
-                thinking to drive measurable business impact.
+                Proven track record architecting scalable systems, conducting advanced statistical modeling, and translating complex data into actionable business intelligence. I combine technical excellence in React, TypeScript, Python, and R with strategic thinking to drive measurable business impact.
               </p>
               
               <div className="mt-8 relative z-10">
@@ -158,10 +169,11 @@ export default function Home() {
               <div>
                 <h4 className="text-xl font-bold mb-2 font-display">Education</h4>
                 <p className="text-foreground font-medium">B.Sc. Statistics & Data Science</p>
-                <p className="text-muted-foreground">Strathmore University (2024 - 2025)</p>
+                <p className="text-muted-foreground">Strathmore University (March 2024 – Sep 2025, paused)</p>
                 <div className="mt-2 text-sm text-muted-foreground space-y-1">
-                  <p>• Produced top-ranked analysis of National Treasury food prices dataset</p>
-                  <p>• Led Islamic banking customer acquisition research</p>
+                  <p>• Top-ranked analysis of National Treasury food prices dataset across first- and second-year cohorts</p>
+                  <p>• Led Islamic banking customer acquisition research for Head of Data Science</p>
+                  <p>• KCSE, Nairobi School (2020–2023); Mathematics Club Chairman; 7th nationwide 2023 Mathematics Olympiad; 4th Brookside Contest; National rep. East African Mathematics Olympiad (2024)</p>
                 </div>
               </div>
             </div>
@@ -172,7 +184,7 @@ export default function Home() {
               </div>
               <div>
                 <h4 className="text-xl font-bold mb-2 font-display">Expertise</h4>
-                <p className="text-muted-foreground">Data Science, Machine Learning, Full Stack Development, Blockchain Solutions, Predictive Analytics</p>
+                <p className="text-muted-foreground">Data Science, Machine Learning, Full-Stack Development, AI & Innovation Consulting, Blockchain & Tokenomics, Productivity Analytics, Predictive Modeling, Strategic Research & Proposals</p>
               </div>
             </div>
 
@@ -183,10 +195,11 @@ export default function Home() {
               <div>
                 <h4 className="text-xl font-bold mb-2 font-display">Achievements</h4>
                 <ul className="text-muted-foreground space-y-1 text-sm">
-                  <li>• National Representative - East African Mathematics Olympiad (2024)</li>
-                  <li>• 7th Place Nationwide - 2023 Mathematics Olympiad</li>
-                  <li>• 4th Place - 2023 Brookside Contest</li>
-                  <li>• Olympiad Teacher Certification (CEMASTEA & UoN)</li>
+                  <li>• 7th place nationwide — 2023 Mathematics Olympiad</li>
+                  <li>• National Representative — East African Mathematics Olympiad (2024)</li>
+                  <li>• 4th place nationwide — 2023 Brookside National Mathematics Contest</li>
+                  <li>• 6th place nationwide — 2022 Round 1 Mathematics Olympiad</li>
+                  <li>• Olympiad Teacher Certification (CEMASTEA & University of Nairobi, Dec 2023); Huawei Data Analytics; Harvard-Standard Peer Counsellor (Nairobi School)</li>
                 </ul>
               </div>
             </div>
@@ -194,7 +207,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section id="experience" title="Professional Journey" subtitle="My career path and key roles">
+      <Section id="experience" title="Professional Journey" subtitle="Career path and key roles">
         <ExperienceTimeline />
       </Section>
 
@@ -206,7 +219,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section id="skills" title="Technical Arsenal" subtitle="Tools and technologies I use to bring ideas to life">
+      <Section id="skills" title="Technical Arsenal" subtitle="Tools and technologies behind the work">
         <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
           {skills.map((skill, index) => (
             <SkillBadge key={skill} name={skill} index={index} />
@@ -218,7 +231,7 @@ export default function Home() {
         <Contact />
       </Section>
 
-  <div className="py-6 border-t border-border text-center text-muted-foreground text-sm">
+  <div className="py-6 border-t border-border/60 text-center text-muted-foreground text-sm font-mono">
     &copy; {new Date().getFullYear()} Alfred Mulinge Maweu. All rights reserved.
   </div>
     </div>
