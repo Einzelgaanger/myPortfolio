@@ -15,10 +15,20 @@ export async function serveStatic(app: Express, server: Server) {
     );
   }
 
-  app.use(express.static(distPath));
+  // Prevent caching of HTML so deploys show up immediately (hashed assets are safe to cache)
+  app.use(express.static(distPath, {
+    setHeaders: (res, filePath) => {
+      if (filePath.endsWith("index.html") || filePath.endsWith(".html")) {
+        res.setHeader("Cache-Control", "no-store, no-cache, must-revalidate");
+        res.setHeader("Pragma", "no-cache");
+      }
+    },
+  }));
 
   // fall through to index.html if the file doesn't exist
-  app.use("*", (_req, res) => {
+  app.use("*", (_req: Request, res) => {
+    res.setHeader("Cache-Control", "no-store, no-cache, must-revalidate");
+    res.setHeader("Pragma", "no-cache");
     res.sendFile(path.resolve(distPath, "index.html"));
   });
 }
